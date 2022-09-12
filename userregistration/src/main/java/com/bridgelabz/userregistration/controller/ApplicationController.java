@@ -19,8 +19,7 @@ import java.util.List;
 public class ApplicationController {
     @Autowired
     UserRegistrationServiceImplementation userRegistrationServiceImplementation;
-
-
+    
     @PostMapping("/register")
     public ResponseEntity<ResponseDTO> registerUser(@RequestBody RegistrationDTO userDTO) {
         UserRegistrationData userData = userRegistrationServiceImplementation.registerUser(userDTO);
